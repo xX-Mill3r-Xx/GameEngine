@@ -20,7 +20,7 @@ namespace MillerSpaceInvaders.Mecanicas
         {
             _xPos = posXinicial;
             _yPos = posYinicial;
-            _vida = 100;
+            _vida = 100.0;
         }
 
         public void ReceberHit(int valor)

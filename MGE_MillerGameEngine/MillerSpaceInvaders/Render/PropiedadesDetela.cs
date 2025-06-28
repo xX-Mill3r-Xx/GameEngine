@@ -25,5 +25,11 @@ namespace MillerSpaceInvaders.Render
                     Mensagens.Erro, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static Font FonteDaTela(int tamanho)
+        {
+            Font fonte = new Font("CONSOLAS", tamanho);
+            return fonte;
+        }
     }
 }

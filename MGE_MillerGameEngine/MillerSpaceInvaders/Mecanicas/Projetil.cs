@@ -26,7 +26,7 @@ namespace MillerSpaceInvaders.Mecanicas
 
         public bool ForaDaTela(int alturaTela)
         {
-            return _yPos < alturaTela;
+            return _yPos < 0;
         }
 
         public void Desenhar(Graphics g)

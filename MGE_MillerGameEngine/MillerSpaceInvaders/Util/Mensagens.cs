@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MillerSpaceInvaders.Mecanicas;
+using System;
 
 namespace MillerSpaceInvaders.Util
 {
@@ -22,6 +23,18 @@ namespace MillerSpaceInvaders.Util
         public static string MensagemDegameOver(int pontuacao)
         {
             var msg = $"Game Over! Sua Pontuação: {pontuacao}\nDeseja reiniciar?";
+            return msg;
+        }
+
+        public static string InformaVidaPlayer(MovimentacaoPlayer player)
+        {
+            var msg = $"Vida: {player._vida}";
+            return msg;
+        }
+
+        public static string InformaPontuacao(int pontuacao)
+        {
+            var msg = $"Pontuação: {pontuacao}";
             return msg;
         }
     }

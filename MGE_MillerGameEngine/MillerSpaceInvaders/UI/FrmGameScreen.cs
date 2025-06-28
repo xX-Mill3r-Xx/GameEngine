@@ -26,6 +26,8 @@ namespace MillerSpaceInvaders
         {
             InitializeComponent();
             KeyPreview = true;
+            KeyDown += Form1_KeyDown;
+            KeyUp += Form1_KeyUp;
 
             _movimento = new MovimentacaoPlayer((int)EPosicaoStart.X, (int)EPosicaoStart.Y);
             _inimigos = new List<Inimigo>();
@@ -34,24 +36,6 @@ namespace MillerSpaceInvaders
 
             tTemporizador.Enabled = true;
             tTemporizador.Interval = 16;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private bool VerificaProjetilForaDaTela()
-        {
-            for (int i = _projeteis.Count - 1; i >= 0; i--)
-            {
-                _projeteis[i].Atualizar();
-                if (_projeteis[i].ForaDaTela(pbTela.Height))
-                    _projeteis.RemoveAt(i);
-                return true;
-            }
-
-            return false;
         }
 
         private void GameOver()
@@ -100,7 +84,12 @@ namespace MillerSpaceInvaders
 
             _movimento.AtualizarMovimento(pbTela.Width, pbTela.Height);
 
-            VerificaProjetilForaDaTela();
+            for (int i = _projeteis.Count - 1; i >= 0; i--)
+            {
+                _projeteis[i].Atualizar();
+                if (_projeteis[i].ForaDaTela(pbTela.Height))
+                    _projeteis.RemoveAt(i);
+            }
 
             for (int i = _inimigos.Count - 1; i >= 0; i--)
             {
@@ -155,8 +144,9 @@ namespace MillerSpaceInvaders
                 projetil.Desenhar(e.Graphics);
             }
 
-            e.Graphics.DrawString($"Vida: {_movimento._vida}", new Font("CONSOLAS", 9), Brushes.Red, 10, 9);
-            e.Graphics.DrawString($"Pontuação: {_pontuacao}", new Font("CONSOLAS", 9), Brushes.White, 480, 9);
+            Font fonte = PropiedadesDetela.FonteDaTela(9);
+            e.Graphics.DrawString(Mensagens.InformaVidaPlayer(_movimento), fonte, Brushes.Red, 10, 9);
+            e.Graphics.DrawString(Mensagens.InformaPontuacao(_pontuacao), fonte, Brushes.White, 480, 9);
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
