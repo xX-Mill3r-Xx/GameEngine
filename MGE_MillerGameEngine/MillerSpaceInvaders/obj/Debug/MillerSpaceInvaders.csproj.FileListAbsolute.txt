@@ -1,0 +1,11 @@
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\bin\Debug\MillerSpaceInvaders.exe.config
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\bin\Debug\MillerSpaceInvaders.exe
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\bin\Debug\MillerSpaceInvaders.pdb
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.csproj.AssemblyReference.cache
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.Form1.resources
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.Properties.Resources.resources
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.csproj.GenerateResource.cache
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.csproj.CoreCompileInputs.cache
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.exe
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.pdb
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.exe.config
