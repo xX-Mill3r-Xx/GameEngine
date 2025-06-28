@@ -91,6 +91,14 @@
   <ItemGroup>
     <None Include="Resources\spaceinvadersIcone.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inimigo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projetil.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

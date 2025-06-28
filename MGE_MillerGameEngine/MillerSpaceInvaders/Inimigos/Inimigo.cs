@@ -1,5 +1,6 @@
 ﻿using MillerSpaceInvaders.Enumeradores;
 using MillerSpaceInvaders.Mecanicas;
+using MillerSpaceInvaders.Render;
 using System;
 using System.Drawing;
 
@@ -50,8 +51,7 @@ namespace MillerSpaceInvaders.Inimigos
 
         public void Desenhar(Graphics g)
         {
-            g.FillRectangle(Brushes.Blue, new Rectangle(_xPos, _yPos,
-                (int)EMedidasEntidade.LARGURA, (int)EMedidasEntidade.ALTURA));
+            PropiedadesDetela.DesenharInimigo(g, _xPos, _yPos);
         }
     }
 }

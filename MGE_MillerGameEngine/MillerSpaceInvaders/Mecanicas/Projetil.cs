@@ -1,4 +1,5 @@
 ﻿using MillerSpaceInvaders.Enumeradores;
+using MillerSpaceInvaders.Render;
 using System.Drawing;
 
 namespace MillerSpaceInvaders.Mecanicas
@@ -31,10 +32,7 @@ namespace MillerSpaceInvaders.Mecanicas
 
         public void Desenhar(Graphics g)
         {
-            g.FillRectangle(Brushes.Yellow,
-                new Rectangle(_xPos, _yPos,
-                (int)EMedidasProjeteis.LARGURA,
-                (int)EMedidasProjeteis.ALTURA));
+            PropiedadesDetela.DesenharProjetil(g, _xPos, _yPos);
         }
     }
 }

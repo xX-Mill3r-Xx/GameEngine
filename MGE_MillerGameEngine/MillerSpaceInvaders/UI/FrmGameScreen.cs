@@ -20,7 +20,9 @@ namespace MillerSpaceInvaders
         private Random _rndSpawnInimigos;
         private int _pontuacao = 0;
 
-        #endregion 
+        #endregion
+
+        #region Constructors
 
         public Form1()
         {
@@ -37,6 +39,8 @@ namespace MillerSpaceInvaders
             tTemporizador.Enabled = true;
             tTemporizador.Interval = 16;
         }
+
+        #endregion
 
         private void GameOver()
         {
