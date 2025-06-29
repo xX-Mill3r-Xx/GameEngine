@@ -26,7 +26,7 @@ namespace MillerSpaceInvaders.Mecanicas
         public void ReceberHit(int valor)
         {
             _vida -= valor;
-            if(_vida < 0)
+            if (_vida < 0)
                 _vida = 0;
         }
 

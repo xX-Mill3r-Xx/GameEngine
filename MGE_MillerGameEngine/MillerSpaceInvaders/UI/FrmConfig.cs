@@ -1,4 +1,5 @@
 ﻿using MillerSpaceInvaders.Configuracoes;
+using MillerSpaceInvaders.Enumeradores;
 using MillerSpaceInvaders.Util;
 using System;
 using System.Windows.Forms;
@@ -12,9 +13,15 @@ namespace MillerSpaceInvaders.UI
             InitializeComponent();
         }
 
+        private void FrmConfig_Load(object sender, EventArgs e)
+        {
+            cbDificuldade.DataSource = Enum.GetValues(typeof(ENivelDificuldade));
+            cbDificuldade.SelectedItem = ConfiguracoesDoJogo.Dificuldade;
+        }
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            ConfiguracoesDoJogo.Dificuldade = cbDificuldade.SelectedItem.ToString();
+            ConfiguracoesDoJogo.Dificuldade = (ENivelDificuldade)cbDificuldade.SelectedItem;
             MessageBox.Show(Mensagens.ConfiguracaoSalva,
                 Mensagens.Sucesso, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();

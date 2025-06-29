@@ -1,4 +1,5 @@
-﻿using MillerSpaceInvaders.Enumeradores;
+﻿using MillerSpaceInvaders.Configuracoes;
+using MillerSpaceInvaders.Enumeradores;
 using MillerSpaceInvaders.Inimigos;
 using MillerSpaceInvaders.Mecanicas;
 using MillerSpaceInvaders.Render;
@@ -92,7 +93,7 @@ namespace MillerSpaceInvaders
         private void SpawnarInimigos()
         {
             int spawnX = _rndSpawnInimigos.Next(0, pbTela.Width - 50);
-            _inimigos.Add(new Inimigo(spawnX, 0, 2, _movimento));
+            _inimigos.Add(new Inimigo(spawnX, 0, _movimento));
         }
 
         private void tTemporizador_Tick(object sender, EventArgs e)
@@ -117,7 +118,7 @@ namespace MillerSpaceInvaders
                 _inimigos[i].Atualizar();
                 if (_inimigos[i].DetectaColisao())
                 {
-                    _movimento.ReceberHit(10);
+                    _movimento.ReceberHit(ObterDano());
                     _inimigos.RemoveAt(i);
 
                     if (_movimento._vida == 0)
@@ -149,6 +150,17 @@ namespace MillerSpaceInvaders
                 SpawnarInimigos();
 
             pbTela.Invalidate();
+        }
+
+        private int ObterDano()
+        {
+            switch (ConfiguracoesDoJogo.Dificuldade)
+            {
+                case ENivelDificuldade.Facil: return 5;
+                case ENivelDificuldade.Medio: return 10;
+                case ENivelDificuldade.Dificil: return 20;
+                default: return 10;
+            }
         }
 
         private void pbTela_Paint(object sender, PaintEventArgs e)

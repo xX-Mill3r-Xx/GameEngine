@@ -47,10 +47,6 @@
             // cbDificuldade
             // 
             this.cbDificuldade.FormattingEnabled = true;
-            this.cbDificuldade.Items.AddRange(new object[] {
-            "Fácil",
-            "Médio",
-            "Difícil"});
             this.cbDificuldade.Location = new System.Drawing.Point(94, 107);
             this.cbDificuldade.Name = "cbDificuldade";
             this.cbDificuldade.Size = new System.Drawing.Size(229, 23);
@@ -72,6 +68,7 @@
             this.Name = "FrmConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configurações";
+            this.Load += new System.EventHandler(this.FrmConfig_Load);
             this.ResumeLayout(false);
 
         }

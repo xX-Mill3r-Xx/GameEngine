@@ -1,7 +1,9 @@
-﻿namespace MillerSpaceInvaders.Configuracoes
+﻿using MillerSpaceInvaders.Enumeradores;
+
+namespace MillerSpaceInvaders.Configuracoes
 {
     public static class ConfiguracoesDoJogo
     {
-        public static string Dificuldade { get; set; } = "Médio";
+        public static ENivelDificuldade Dificuldade { get; set; } = ENivelDificuldade.Medio;
     }
 }

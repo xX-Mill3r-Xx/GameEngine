@@ -1,4 +1,5 @@
-﻿using MillerSpaceInvaders.Enumeradores;
+﻿using MillerSpaceInvaders.Configuracoes;
+using MillerSpaceInvaders.Enumeradores;
 using MillerSpaceInvaders.Mecanicas;
 using MillerSpaceInvaders.Render;
 using System;
@@ -17,12 +18,24 @@ namespace MillerSpaceInvaders.Inimigos
 
         #endregion
 
-        public Inimigo(int spawnX, int spawnY, int velocidade, MovimentacaoPlayer player)
+        public Inimigo(int spawnX, int spawnY, MovimentacaoPlayer player)
         {
             _xPos = spawnX;
             _yPos = spawnY;
-            _velocidade = velocidade;
             _player = player;
+
+            switch (ConfiguracoesDoJogo.Dificuldade)
+            {
+                case ENivelDificuldade.Facil:
+                    _velocidade = 2;
+                    break;
+                case ENivelDificuldade.Medio:
+                    _velocidade = 4;
+                    break;
+                case ENivelDificuldade.Dificil:
+                    _velocidade = 8;
+                    break;
+            }
         }
 
         public void Atualizar()

@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmGameScreen.cs",
-              "DocumentMoniker": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "RelativeDocumentMoniker": "MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "ToolTip": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "RelativeToolTip": "MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T17:35:45.152Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -42,8 +29,23 @@
               "ToolTip": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\MillerSpaceInvaders\\UI\\FrmGameScreen.cs [Design]",
               "RelativeToolTip": "MillerSpaceInvaders\\UI\\FrmGameScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T17:35:42.545Z",
+              "WhenOpened": "2025-06-29T18:19:44.31Z",
+              "IsPinned": true,
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmGameScreen.cs",
+              "DocumentMoniker": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
+              "RelativeDocumentMoniker": "MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
+              "ToolTip": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
+              "RelativeToolTip": "MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T18:19:49.682Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             }
           ]
         }

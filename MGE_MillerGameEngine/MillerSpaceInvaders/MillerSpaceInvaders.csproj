@@ -49,6 +49,7 @@
     <Compile Include="Configuracoes\ConfiguracoesDoJogo.cs" />
     <Compile Include="Enumeradores\EMedidasEntidade.cs" />
     <Compile Include="Enumeradores\EMedidasProjeteis.cs" />
+    <Compile Include="Enumeradores\ENivelDificuldade.cs" />
     <Compile Include="Enumeradores\EPosicaoStart.cs" />
     <Compile Include="Inimigos\Inimigo.cs" />
     <Compile Include="Mecanicas\MovimentacaoPlayer.cs" />
