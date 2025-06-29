@@ -3,6 +3,7 @@ using MillerSpaceInvaders.Mecanicas;
 using MillerSpaceInvaders.Util;
 using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace MillerSpaceInvaders.Render
@@ -14,8 +15,29 @@ namespace MillerSpaceInvaders.Render
         private static Image _playerImage;
         private static Image _inimigoImage;
         private static Image _projetilImage;
+        private static Image _backGroundImage;
+        private static Random _starRandom = new Random(42);
 
         #endregion
+
+        public static Image BackGroundImage
+        {
+            get
+            {
+                if (_backGroundImage == null)
+                {
+                    try
+                    {
+                        _backGroundImage = Properties.Resources.background;
+                    }
+                    catch (Exception)
+                    {
+                        return null;
+                    }
+                }
+                return _backGroundImage;
+            }
+        }
 
         public static Image PlayerImage
         {
@@ -78,7 +100,13 @@ namespace MillerSpaceInvaders.Render
         {
             try
             {
-                e.Graphics.Clear(Color.Black);
+                //e.Graphics.Clear(Color.DarkBlue);
+
+                //DesenharFundoDeTelaGradiente(e.Graphics, e.ClipRectangle);
+
+                //DesenharFundoImagem(e.Graphics, e.ClipRectangle);
+
+                DesenharFundoEstrelas(e.Graphics, e.ClipRectangle);
 
                 if (PlayerImage != null)
                 {
@@ -177,10 +205,55 @@ namespace MillerSpaceInvaders.Render
             _playerImage?.Dispose();
             _inimigoImage?.Dispose();
             _projetilImage?.Dispose();
+            _backGroundImage?.Dispose();
 
             _playerImage = null;
             _inimigoImage = null;
             _projetilImage = null;
+            _backGroundImage = null;
+        }
+
+        private static void DesenharFundoDeTelaGradiente(Graphics g, Rectangle area)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                area,
+                Color.DarkBlue,
+                Color.Black,
+                LinearGradientMode.Vertical))
+            {
+                g.FillRectangle(brush, area);
+            }
+        }
+
+        private static void DesenharFundoImagem(Graphics g, Rectangle area)
+        {
+            if (BackGroundImage != null)
+            {
+                g.DrawImage(BackGroundImage, area);
+            }
+            else
+            {
+                g.Clear(Color.Black);
+            }
+        }
+
+        private static void DesenharFundoEstrelas(Graphics g, Rectangle area)
+        {
+            g.Clear(Color.Black);
+
+            Brush starBrush = Brushes.White;
+            int numeroEstrelas = 100;
+
+            _starRandom = new Random(42);
+
+            for (int i = 0; i < numeroEstrelas; i++)
+            {
+                int x = _starRandom.Next(0, area.Width);
+                int y = _starRandom.Next(0, area.Height);
+                int tamanho = _starRandom.Next(1, 3);
+
+                g.FillEllipse(starBrush, x,y, tamanho, tamanho);
+            }
         }
     }
 }

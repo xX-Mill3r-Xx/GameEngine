@@ -6,6 +6,7 @@ using MillerSpaceInvaders.Util;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace MillerSpaceInvaders
@@ -31,6 +32,8 @@ namespace MillerSpaceInvaders
             KeyDown += Form1_KeyDown;
             KeyUp += Form1_KeyUp;
 
+            ConfigurarPictureBox();
+
             _movimento = new MovimentacaoPlayer((int)EPosicaoStart.X, (int)EPosicaoStart.Y);
             _inimigos = new List<Inimigo>();
             _projeteis = new List<Projetil>();
@@ -42,13 +45,23 @@ namespace MillerSpaceInvaders
 
         #endregion
 
+        private void ConfigurarPictureBox()
+        {
+            typeof(PictureBox).InvokeMember("DoubleBuffered",
+                BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
+                null, pbTela, new object[] { true });
+
+            pbTela.BackColor = Color.Black;
+            pbTela.Paint += pbTela_Paint;
+        }
+
         private void GameOver()
         {
             try
             {
                 tTemporizador.Enabled = false;
                 var result = MessageBox.Show(Mensagens.MensagemDegameOver(_pontuacao),
-                    Mensagens.GameOver,MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    Mensagens.GameOver, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                     ReiniciarGame();
                 else
@@ -57,7 +70,7 @@ namespace MillerSpaceInvaders
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,
-                    Mensagens.Erro,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Mensagens.Erro, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -128,7 +141,7 @@ namespace MillerSpaceInvaders
                 }
             }
 
-            if(_rndSpawnInimigos.Next(0,100) < 5)
+            if (_rndSpawnInimigos.Next(0, 100) < 5)
                 SpawnarInimigos();
 
             pbTela.Invalidate();
@@ -163,6 +176,13 @@ namespace MillerSpaceInvaders
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             _movimento.SoltarTecla(e);
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            PropiedadesDetela.LimparRecursos();
+            pbTela.BackgroundImage?.Dispose();
+            base.OnFormClosed(e);
         }
     }
 }
