@@ -183,7 +183,7 @@ Contribuições são bem-vindas! Para contribuir:
 - ✅ Sistema de pontuação
 - ✅ Suporte para sprites PNG
 - ✅ Múltiplas opções de background
-- 🔄 Sistema de menu (em andamento)
+- ✅ Sistema de menu
 - 🔄 Efeitos sonoros (planejado)
 
 ## 👨‍💻 Autor
@@ -206,8 +206,8 @@ Contribuições são bem-vindas! Para contribuir:
 ## 📊 Status do Projeto
 
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge)
-![Issues](https://img.shields.io/github/issues/SEU_USUARIO/miller-space-invaders?style=for-the-badge)
-![Pull Requests](https://img.shields.io/github/issues-pr/SEU_USUARIO/miller-space-invaders?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/xX-Mill3r-Xx/miller-space-invaders?style=for-the-badge)
+![Pull Requests](https://img.shields.io/github/issues-pr/xX-Mill3r-Xx/miller-space-invaders?style=for-the-badge)
 
 ---
 
