@@ -9,3 +9,5 @@ X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debu
 X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.exe
 X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.pdb
 X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.exe.config
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.UI.FrmConfig.resources
+X:\MillerGameEngine\GameEngine\MGE_MillerGameEngine\MillerSpaceInvaders\obj\Debug\MillerSpaceInvaders.UI.FrmMenuInicial.resources

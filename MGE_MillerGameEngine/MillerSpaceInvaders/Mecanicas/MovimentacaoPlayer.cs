@@ -96,7 +96,7 @@ namespace MillerSpaceInvaders.Mecanicas
                 _yPos = 0;
             if (_xPos > larguraTela - 50)
                 _xPos = larguraTela - 50;
-            if (_yPos > larguraTela - 50)
+            if (_yPos > alturaTela - 50)
                 _yPos = alturaTela - 50;
         }
     }

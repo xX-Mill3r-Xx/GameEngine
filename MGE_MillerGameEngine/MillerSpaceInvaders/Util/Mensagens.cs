@@ -7,6 +7,8 @@ namespace MillerSpaceInvaders.Util
     {
         public static string Erro => "Erro";
         public static string GameOver => "Game Over!";
+        public static string Sucesso => "Sucesso";
+        public static string ConfiguracaoSalva => "Configurações salva com sucesso!";
 
         public static string ErroDeExecucao(Exception ex)
         {

@@ -20,6 +20,7 @@ namespace MillerSpaceInvaders
         private List<Projetil> _projeteis;
         private Random _rndSpawnInimigos;
         private int _pontuacao = 0;
+        private bool _jogoPausado = false;
 
         #endregion
 
@@ -96,6 +97,9 @@ namespace MillerSpaceInvaders
 
         private void tTemporizador_Tick(object sender, EventArgs e)
         {
+            if (_jogoPausado)
+                return;
+
             if (!tTemporizador.Enabled)
                 return;
 
@@ -164,18 +168,54 @@ namespace MillerSpaceInvaders
             Font fonte = PropiedadesDetela.FonteDaTela(9);
             e.Graphics.DrawString(Mensagens.InformaVidaPlayer(_movimento), fonte, Brushes.Red, 10, 9);
             e.Graphics.DrawString(Mensagens.InformaPontuacao(_pontuacao), fonte, Brushes.White, 480, 9);
+
+            if (_jogoPausado)
+            {
+                Font fontePause = PropiedadesDetela.FonteDaTela(16);
+                string textoPause = "JOGO PAUSADO - ESC para continuar";
+                SizeF tamanhoTexto = e.Graphics.MeasureString(textoPause, fontePause);
+                float x = (pbTela.Width - tamanhoTexto.Width) / 2;
+                float y = (pbTela.Height - tamanhoTexto.Height) / 2;
+
+                using (Brush fundoPause = new SolidBrush(Color.FromArgb(128, Color.Black)))
+                {
+                    e.Graphics.FillRectangle(fundoPause, 0, 0, pbTela.Width, pbTela.Height);
+                }
+
+                e.Graphics.DrawString(textoPause, fontePause, Brushes.Yellow, x, y);
+            }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            _movimento.PressionarTecla(e);
-            if (e.KeyCode == Keys.Enter)
-                _projeteis.Add(new Projetil(_movimento._xPos + 20, _movimento._yPos));
+            if (!_jogoPausado)
+            {
+                _movimento.PressionarTecla(e);
+                if (e.KeyCode == Keys.Enter)
+                    _projeteis.Add(new Projetil(_movimento._xPos + 20, _movimento._yPos));
+            }
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                _jogoPausado = !_jogoPausado;
+                if (_jogoPausado)
+                {
+                    tTemporizador.Stop();
+                }
+                else
+                {
+                    tTemporizador.Start();
+                }
+                pbTela.Invalidate();
+            }
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            _movimento.SoltarTecla(e);
+            if (!_jogoPausado)
+            {
+                _movimento.SoltarTecla(e);
+            }
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)

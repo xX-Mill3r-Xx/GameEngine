@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuracoes\ConfiguracoesDoJogo.cs" />
     <Compile Include="Enumeradores\EMedidasEntidade.cs" />
     <Compile Include="Enumeradores\EMedidasProjeteis.cs" />
     <Compile Include="Enumeradores\EPosicaoStart.cs" />
@@ -53,6 +54,12 @@
     <Compile Include="Mecanicas\MovimentacaoPlayer.cs" />
     <Compile Include="Mecanicas\Projetil.cs" />
     <Compile Include="Render\PropiedadesDetela.cs" />
+    <Compile Include="UI\FrmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmConfig.Designer.cs">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmGameScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,7 +68,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\FrmMenuInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMenuInicial.Designer.cs">
+      <DependentUpon>FrmMenuInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\Mensagens.cs" />
+    <EmbeddedResource Include="UI\FrmConfig.resx">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmGameScreen.resx">
       <DependentUpon>FrmGameScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +91,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\FrmMenuInicial.resx">
+      <DependentUpon>FrmMenuInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
