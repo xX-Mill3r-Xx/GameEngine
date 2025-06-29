@@ -1,53 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{79E12872-EC27-41AF-98C3-58BA7F9F79D7}|MillerSpaceInvaders\\MillerSpaceInvaders.csproj|x:\\millergameengine\\gameengine\\mge_millergameengine\\millerspaceinvaders\\ui\\frmgamescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79E12872-EC27-41AF-98C3-58BA7F9F79D7}|MillerSpaceInvaders\\MillerSpaceInvaders.csproj|solutionrelative:millerspaceinvaders\\ui\\frmgamescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79E12872-EC27-41AF-98C3-58BA7F9F79D7}|MillerSpaceInvaders\\MillerSpaceInvaders.csproj|x:\\millergameengine\\gameengine\\mge_millergameengine\\millerspaceinvaders\\ui\\frmgamescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79E12872-EC27-41AF-98C3-58BA7F9F79D7}|MillerSpaceInvaders\\MillerSpaceInvaders.csproj|solutionrelative:millerspaceinvaders\\ui\\frmgamescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmGameScreen.cs",
-              "DocumentMoniker": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "RelativeDocumentMoniker": "MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "ToolTip": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "RelativeToolTip": "MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAWwIkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T18:33:37.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmGameScreen.cs [Design]",
-              "DocumentMoniker": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "RelativeDocumentMoniker": "MillerSpaceInvaders\\UI\\FrmGameScreen.cs",
-              "ToolTip": "X:\\MillerGameEngine\\GameEngine\\MGE_MillerGameEngine\\MillerSpaceInvaders\\UI\\FrmGameScreen.cs [Design]",
-              "RelativeToolTip": "MillerSpaceInvaders\\UI\\FrmGameScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T18:33:30.208Z",
-              "EditorCaption": " [Design]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
