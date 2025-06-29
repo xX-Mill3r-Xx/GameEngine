@@ -168,22 +168,6 @@ namespace MillerSpaceInvaders
             Font fonte = PropiedadesDetela.FonteDaTela(9);
             e.Graphics.DrawString(Mensagens.InformaVidaPlayer(_movimento), fonte, Brushes.Red, 10, 9);
             e.Graphics.DrawString(Mensagens.InformaPontuacao(_pontuacao), fonte, Brushes.White, 480, 9);
-
-            if (_jogoPausado)
-            {
-                Font fontePause = PropiedadesDetela.FonteDaTela(16);
-                string textoPause = "JOGO PAUSADO - ESC para continuar";
-                SizeF tamanhoTexto = e.Graphics.MeasureString(textoPause, fontePause);
-                float x = (pbTela.Width - tamanhoTexto.Width) / 2;
-                float y = (pbTela.Height - tamanhoTexto.Height) / 2;
-
-                using (Brush fundoPause = new SolidBrush(Color.FromArgb(128, Color.Black)))
-                {
-                    e.Graphics.FillRectangle(fundoPause, 0, 0, pbTela.Width, pbTela.Height);
-                }
-
-                e.Graphics.DrawString(textoPause, fontePause, Brushes.Yellow, x, y);
-            }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -200,6 +184,8 @@ namespace MillerSpaceInvaders
                 _jogoPausado = !_jogoPausado;
                 if (_jogoPausado)
                 {
+                    MessageBox.Show(Mensagens.PauseGame ,
+                        Mensagens.Pause, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     tTemporizador.Stop();
                 }
                 else
