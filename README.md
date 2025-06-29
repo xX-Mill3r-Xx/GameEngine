@@ -11,6 +11,7 @@ Um jogo clássico de Space Invaders desenvolvido em C# com Windows Forms, aprese
 
 <!-- Adicione suas capturas de tela aqui -->
 ![Gameplay Screenshot 1](img/in_game.png)
+![Gameplay Screenshot 2](img/in_game2.png)
 
 *Tela principal do jogo em ação*
 
@@ -191,6 +192,10 @@ Contribuições são bem-vindas! Para contribuir:
 - GitHub: [@xX-Mill3r-Xx]([https://github.com/SEU_USUARIO](https://github.com/xX-Mill3r-Xx))
 - LinkedIn: [Miller M. Vasco]([https://linkedin.com/in/seu-perfil](https://www.linkedin.com/in/miller-martins-95bab5310/))
 - Email: millermartinsvasco1@gmail.com
+
+## 📃Licensa
+   Este é um projeto pessoal, não se trata de um jogo comercial e somente serve como estudo para desenvolvimento de mecanicas para games em c#.
+   O sistema pode ser baixado, modificado ou melhorado com os devidos créditos.
 
 ## 🙏 Agradecimentos
 
