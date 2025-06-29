@@ -47,6 +47,11 @@ namespace MillerSpaceInvaders
 
         #endregion
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ConfigStorage.Carregar();
+        }
+
         private void ConfigurarPictureBox()
         {
             typeof(PictureBox).InvokeMember("DoubleBuffered",

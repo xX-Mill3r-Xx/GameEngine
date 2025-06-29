@@ -22,6 +22,8 @@ namespace MillerSpaceInvaders.UI
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             ConfiguracoesDoJogo.Dificuldade = (ENivelDificuldade)cbDificuldade.SelectedItem;
+            ConfigStorage.Salvar();
+
             MessageBox.Show(Mensagens.ConfiguracaoSalva,
                 Mensagens.Sucesso, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
